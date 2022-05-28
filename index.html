@@ -3,16 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarwan's Portfolio</title>
+    <title>Sarwan Portfolio</title>
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
+    
     <!-- custom css file link  -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="preloader.css">
 </head>
 <body>
-    
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
+
+
+
+            <!-- animation js -->
+    <script src="plugins.js"></script>
+    <script>
+        $(window).on("load", function() {
+            $('body').addClass('loaded');
+        });
+    </script>
 <!-- header section starts  -->
 
 <header>
@@ -67,29 +84,29 @@
         <h3> <span> Qualification : </span> 10th (Ongoing) </h3>
         <h3> <span> Post : </span> Senior </h3>
         <h3> <span> Language : </span> hindi and english </h3>
-        <a href="resume.pdf" download=""><button class="btn"> Download CV <i class="fas fa-download"></i> </button></a>
+        <a href="" download=""><button class="btn"> Download CV <i class="fas fa-download"></i> </button></a>
     </div>
 
     <div class="counter">
 
         <div class="box">
             <span>5+</span>
-            <h3>Years of experience</h3>
+            <h3> Years of experience </h3>
         </div>
 
         <div class="box">
-            <span>60+</span>
-            <h3>Porject Completed</h3>
+            <span>72+</span>
+            <h3> Porject Completed </h3>
         </div>
 
         <div class="box">
             <span>2+</span>
-            <h3>Certificates</h3>
+            <h3> Certificates </h3>
         </div>
 
         <div class="box">
             <span>1+</span>
-            <h3>Awards won</h3>
+            <h3> Awards won </h3>
         </div>
 
     </div>
@@ -149,7 +166,7 @@
                 <br>
                 <li>Mysql in Mysql DBMS</li>
                 <br>
-                <li>18 Project Completed</li>
+                <li>20 Project Completed</li>
                 <br>
             </ul>
         </p>
@@ -180,7 +197,7 @@
                 <br>
                 <li>Master in Python and Tkinter with Mysql</li>
                 <br>
-                <li>Python and Tkinter with MYSQL combined 6 Project Completed</li>
+                <li>Python and Tkinter with MYSQL combined 8 Project Completed</li>
             </ul>
         </p>
     </div>
