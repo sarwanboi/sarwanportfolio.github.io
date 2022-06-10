@@ -1,8 +1,10 @@
-# Sarwan Portfolio
-Sarwan Yadav Portfolio Website
+# Sarwan Personal Portfolio
 
-Owner: Sarwan Yadav
-Developer : Sarwan Yadav
+## Website Personal Information
+- Owner: `Sarwan Yadav`
+- Developed & Built by @ `Sarwan Yadav`
 
-Instagram: _sarwan_._
+## Contact Us
+- Instagram: ` _sarwan_._`
+- Personal Whatsapp Contact Number: ` +91 8960446756`
 
