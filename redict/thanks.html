@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Redirecting</title>
@@ -8,38 +9,42 @@
   <link rel="stylesheet" href="./style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 </head>
+
 <body>
-<!-- partial:index.partial.html -->
-<div class='body'>
-  <span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-  </span>
-  <div class='base'>
-    <span></span>
-    <div class='face'></div>
+  <!-- partial:index.partial.html -->
+  <div class='body'>
+    <span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div class='base'>
+      <span></span>
+      <div class='face'></div>
+    </div>
   </div>
-</div>
-<div class='longfazers'>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-<h1>Sending Your Mail</h1>
-<!-- partial -->
-<script  src="./script.js"></script>
-<SCRIPT language=JavaScript>
-  var message = "function disabled";
-  
-  function rtclickcheck(keyp){ if (navigator.appName == "Netscape" && keyp.which == 3){ alert(message); return false; }
-  
-  if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) { alert(message); return false; } }
-  
-  document.onmousedown = rtclickcheck;
-  
-</SCRIPT>
+  <div class='longfazers'>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <h1>Sending Your Mail</h1>
+  <!-- partial -->
+  <script src="./script.js"></script>
+  <SCRIPT language=JavaScript>
+    var message = "function disabled";
+
+    function rtclickcheck(keyp) {
+      if (navigator.appName == "Netscape" && keyp.which == 3) { alert(message); return false; }
+
+      if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) { alert(message); return false; }
+    }
+
+    document.onmousedown = rtclickcheck;
+
+  </SCRIPT>
 </body>
+
 </html>
