@@ -1,50 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta
+      http-equiv="refresh"
+      content="5;url=https://sarwanboi.github.io/sarwanportfolio.github.io/"
+    />
+    <meta charset="UTF-8" />
+    <title>Sending Mail</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <style>
+      body {
+        background-color: #f5f5f5;
+        margin: 0;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <title>Redirecting</title>
-  <meta http-equiv="refresh" content="4; URL=https://sarwanboi.github.io/sarwanportfolio.github.io/" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="./style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-</head>
+      .sending-mail-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+      }
 
-<body>
-  <!-- partial:index.partial.html -->
-  <div class='body'>
-    <span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </span>
-    <div class='base'>
-      <span></span>
-      <div class='face'></div>
+      .sending-mail-container h2 {
+        margin-top: 20px;
+        font-size: 32px;
+        font-weight: 700;
+      }
+
+      .mail-animation {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        margin-top: 30px;
+      }
+
+      .mail-envelope {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 80px;
+        height: 60px;
+        border: 5px solid #3b5998;
+        background-color: #fff;
+        transform: rotate(-20deg);
+        animation: envelope-flap 1s ease-in-out infinite;
+      }
+
+      .mail-flap {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid #3b5998;
+        transform: rotate(-20deg);
+      }
+
+      .mail-stamp {
+        position: absolute;
+        top: 30px;
+        left: 50px;
+        width: 20px;
+        height: 20px;
+        background-color: #3b5998;
+        transform: rotate(20deg);
+        animation: stamp-rotate 1s ease-in-out infinite;
+      }
+
+      .mail-animation span {
+        position: absolute;
+        border-radius: 50%;
+        animation: mail-bounce 1s ease-in-out infinite;
+      }
+
+      .mail-animation span:nth-child(1) {
+        width: 100%;
+        height: 100%;
+        background-color: #3b5998;
+        opacity: 0.6;
+      }
+
+      .mail-animation span:nth-child(2) {
+        width: 100%;
+        height: 100%;
+        border: 5px solid #3b5998;
+        opacity: 0.4;
+        animation-delay: 0.25s;
+      }
+
+      .mail-animation span:nth-child(3) {
+        width: 100%;
+        height: 100%;
+        border: 5px solid #3b5998;
+        opacity: 0.2;
+        animation-delay: 0.5s;
+      }
+
+      .mail-animation span:nth-child(4) {
+        width: 100%;
+        height: 100%;
+        border: 5px solid #3b5998;
+        opacity: 0.1;
+        animation-delay: 0.75s;
+      }
+
+      @keyframes mail-bounce {
+        0% {
+          transform: translateY(0px);
+        }
+
+        50% {
+          transform: translateY(-20px);
+        }
+
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      @keyframes envelope-flap {
+        0% {
+          transform: rotate(-20deg);
+        }
+
+        50% {
+          transform: rotate(20deg);
+        }
+
+        100% {
+          transform: rotate(-20deg);
+        }
+      }
+
+      @keyframes stamp-rotate {
+        0% {
+          transform: rotate(20deg);
+        }
+
+        100% {
+          transform: rotate(-20deg);
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        .sending-mail-container h2 {
+          font-size: 24px;
+        }
+
+        .sending-mail-container .mail-animation {
+          width: 80px;
+          height: 80px;
+          margin-top: 15px;
+        }
+
+        .sending-mail-container .mail-animation .mail-envelope {
+          top: 15px;
+          left: 15px;
+          width: 50px;
+          height: 40px;
+          border-width: 3px;
+        }
+
+        .sending-mail-container .mail-animation .mail-stamp {
+          top: 20px;
+          left: 35px;
+          width: 12px;
+          height: 12px;
+        }
+
+        .sending-mail-container .mail-animation span:nth-child(1) {
+          opacity: 0.4;
+        }
+
+        .sending-mail-container .mail-animation span:nth-child(2) {
+          border-width: 3px;
+          opacity: 0.3;
+          animation-delay: 0.2s;
+        }
+
+        .sending-mail-container .mail-animation span:nth-child(3) {
+          border-width: 3px;
+          opacity: 0.1;
+          animation-delay: 0.4s;
+        }
+
+        .sending-mail-container .mail-animation span:nth-child(3) {
+          border-width: 3px;
+          opacity: 0.1;
+          animation-delay: 0.4s;
+        }
+
+        .sending-mail-container .mail-animation span:nth-child(4) {
+          border-width: 3px;
+          opacity: 0.05;
+          animation-delay: 0.6s;
+        }
+      }
+
+      @media only screen and (max-width: 480px) {
+        .sending-mail-container h2 {
+          font-size: 20px;
+        }
+
+        .sending-mail-container .mail-animation {
+          width: 60px;
+          height: 60px;
+          margin-top: 10px;
+        }
+
+        .sending-mail-container .mail-animation .mail-envelope {
+          top: 10px;
+          left: 10px;
+          width: 40px;
+          height: 30px;
+          border-width: 2px;
+        }
+
+        .sending-mail-container .mail-animation .mail-stamp {
+          top: 15px;
+          left: 25px;
+          width: 10px;
+          height: 10px;
+        }
+
+        .sending-mail-container .mail-animation span:nth-child(1) {
+          opacity: 0.3;
+        }
+
+        .sending-mail-container .mail-animation span:nth-child(2) {
+          border-width: 2px;
+          opacity: 0.2;
+          animation-delay: 0.15s;
+        }
+
+        .sending-mail-container .mail-animation span:nth-child(3) {
+          border-width: 2px;
+          opacity: 0.1;
+          animation-delay: 0.3s;
+        }
+
+        .sending-mail-container .mail-animation span:nth-child(4) {
+          border-width: 2px;
+          opacity: 0.05;
+          animation-delay: 0.45s;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="sending-mail-container">
+      <div class="mail-animation">
+        <div class="mail-envelope">
+          <div class="mail-flap"></div>
+          <div class="mail-stamp"></div>
+        </div>
+      </div>
+      <h2>Sending Mail...</h2>
     </div>
-  </div>
-  <div class='longfazers'>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <h1>Sending Your Mail</h1>
-  <!-- partial -->
-  <script src="./script.js"></script>
-  <SCRIPT language=JavaScript>
-    var message = "function disabled";
-
-    function rtclickcheck(keyp) {
-      if (navigator.appName == "Netscape" && keyp.which == 3) { alert(message); return false; }
-
-      if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) { alert(message); return false; }
-    }
-
-    document.onmousedown = rtclickcheck;
-
-  </SCRIPT>
-</body>
-
+  </body>
 </html>
