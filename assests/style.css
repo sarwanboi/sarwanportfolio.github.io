@@ -248,6 +248,8 @@ section .title::after {
 /* about section styling */
 .about .title::after {
     content: "who i am";
+    color: #000;
+    background-color: #FFF;
 }
 
 .about .about-content .left {
@@ -804,6 +806,41 @@ footer span a:hover {
         width: 100%;
         margin-bottom: 35px;
     }
+
+    .navbar .logo a {
+        color: #161616;
+    }
+
+    .navbar .logo a span {
+        color: #ccc;
+    }
+
+    .navbar.sticky .logo a span {
+        color: #000;
+    }
+
+    .navbar .menu li a {
+        color: #111;
+    }
+    .navbar .menu li a:hover {
+        color: #6bc8f6;
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .navbar.sticky .menu li a:hover {
+        color: #fff;
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .navbar .menu {
+        backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.5);
+        color: #000;
+        /* Change to your desired text color */
+    }
+
 }
 
 @media (max-width: 690px) {
@@ -828,7 +865,56 @@ footer span a:hover {
     }
 }
 
-@media (max-width: 500px) {
+
+@media only screen and (max-width: 550px) {
+    .home {
+        background: url("../images/banner1.jpg") no-repeat center;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 45px;
+        color: #FFF;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 24px;
+    }
+
+    .home .home-content .text-3 span {
+        color: #FFF;
+    }
+
+    .about .about-content .right .text,
+    .skills .skills-content .left .text {
+        font-size: 18px;
+    }
+
+    .contact .right form .fields {
+        flex-direction: column;
+    }
+
+    .contact .right form .name,
+    .contact .right form .email {
+        margin: 0;
+    }
+
+    .scroll-up-btn {
+        height: 32px;
+        width: 29px;
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    .navbar .logo a {
+        color: #161616;
+    }
+
+    .navbar .logo a span {
+        color: #FFF;
+    }
+}
+
+@media only screen and (max-width: 500px) {
     .home .home-content .text-2 {
         font-size: 50px;
     }
@@ -852,11 +938,103 @@ footer span a:hover {
     }
 
     .scroll-up-btn {
-        right: 15px;
-        bottom: 15px;
         height: 38px;
         width: 35px;
         font-size: 23px;
         line-height: 38px;
+    }
+}
+
+@media only screen and (max-width: 535px) {
+    .home {
+        background: url("../images/banner1.jpg") no-repeat center;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .home .home-content .text-2 {
+        font-size: 40px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 22px;
+    }
+
+    .about .about-content .right .text,
+    .skills .skills-content .left .text {
+        font-size: 18px;
+    }
+
+    .scroll-up-btn {
+        height: 30px;
+        width: 27px;
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+
+@media only screen and (max-width: 412px) {
+    .home .home-content .text-2 {
+        font-size: 36px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 20px;
+    }
+
+    .about .about-content .right .text,
+    .skills .skills-content .left .text {
+        font-size: 16px;
+    }
+
+    .scroll-up-btn {
+        height: 28px;
+        width: 25px;
+        font-size: 16px;
+        line-height: 28px;
+    }
+}
+
+@media only screen and (max-width: 384px) {
+    .home .home-content .text-2 {
+        font-size: 32px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 18px;
+    }
+
+    .about .about-content .right .text,
+    .skills .skills-content .left .text {
+        font-size: 14px;
+    }
+
+    .scroll-up-btn {
+        height: 25px;
+        width: 23px;
+        font-size: 14px;
+        line-height: 25px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .home .home-content .text-2 {
+        font-size: 30px;
+    }
+
+    .home .home-content .text-3 {
+        font-size: 17px;
+    }
+
+    .about .about-content .right .text,
+    .skills .skills-content .left .text {
+        font-size: 13px;
+    }
+
+    .scroll-up-btn {
+        height: 23px;
+        width: 20px;
+        font-size: 13px;
+        line-height: 23px;
     }
 }
