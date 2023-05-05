@@ -1,269 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta
-      http-equiv="refresh"
-      content="5;url=https://sarwanboi.github.io/sarwanportfolio.github.io/"
-    />
-    <meta charset="UTF-8" />
-    <title>Sending Mail</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
-    />
-    <style>
-      body {
-        background-color: #f5f5f5;
-        margin: 0;
+
+<head>
+  <meta http-equiv="refresh" content="4;url=https://sarwanboi.github.io/sarwanportfolio.github.io/" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=yes">
+  <meta name="description" content="Sarwan Yadav Personal Portfolio Website">
+  <meta name="keywords" content="Portfolio, Sarwan Portfolio, Sarwan Yadav">
+  <meta name="author" content="Sarwan Yadav">
+  <meta name="theme-color" content="#RRGGBB">
+  <meta name="content-language" content="en-US">
+
+  <title>Sending Mail</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+
+  <style>
+    body {
+      background-color: #dbf4ff;
+      margin: 0;
+    }
+
+    .sending-mail-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .sending-mail-container h2 {
+      margin-top: 20px;
+      font-size: 32px;
+      font-weight: 700;
+      color: #3978ee;
+    }
+
+    .mail-animation {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin-top: 30px;
+    }
+
+    .mail-envelope {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 80px;
+      height: 60px;
+      border: 5px solid #256cdf;
+      background-color: #ffffff;
+      transform: rotate(-20deg);
+      animation: envelope-flap 1s ease-in-out infinite;
+    }
+
+    .mail-flap {
+      position: absolute;
+      top: -9px;
+      right: -3px;
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 10px solid #256cdf;
+      transform: rotate(-48deg);
+    }
+
+    .mail-stamp {
+      position: absolute;
+      top: 30px;
+      left: 50px;
+      width: 20px;
+      height: 20px;
+      background-color: #256cdf;
+      transform: rotate(20deg);
+      animation: stamp-rotate 1s ease-in-out infinite;
+    }
+
+    .mail-animation span {
+      position: absolute;
+      border-radius: 50%;
+      animation: mail-bounce 1s ease-in-out infinite;
+    }
+
+    .mail-animation span:nth-child(1) {
+      width: 100%;
+      height: 100%;
+      background-color: #256cdf;
+      opacity: 0.6;
+    }
+
+    .mail-animation span:nth-child(2) {
+      width: 100%;
+      height: 100%;
+      border: 5px solid #256cdf;
+      opacity: 0.4;
+      animation-delay: 0.25s;
+    }
+
+    .mail-animation span:nth-child(3) {
+      width: 100%;
+      height: 100%;
+      border: 5px solid #256cdf;
+      opacity: 0.2;
+      animation-delay: 0.5s;
+    }
+
+    .mail-animation span:nth-child(4) {
+      width: 100%;
+      height: 100%;
+      border: 5px solid #256cdf;
+      opacity: 0.1;
+      animation-delay: 0.75s;
+    }
+
+    @keyframes mail-bounce {
+      0% {
+        transform: translateY(0px);
       }
 
-      .sending-mail-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        font-family: Arial, sans-serif;
+      50% {
+        transform: translateY(-20px);
       }
 
-      .sending-mail-container h2 {
-        margin-top: 20px;
-        font-size: 32px;
-        font-weight: 700;
+      100% {
+        transform: translateY(0px);
       }
+    }
 
-      .mail-animation {
-        position: relative;
-        width: 120px;
-        height: 120px;
-        margin-top: 30px;
-      }
-
-      .mail-envelope {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        width: 80px;
-        height: 60px;
-        border: 5px solid #3b5998;
-        background-color: #fff;
+    @keyframes envelope-flap {
+      0% {
         transform: rotate(-20deg);
-        animation: envelope-flap 1s ease-in-out infinite;
       }
 
-      .mail-flap {
-        position: absolute;
-        top: -5px;
-        right: -5px;
-        width: 0;
-        height: 0;
-        border-top: 10px solid transparent;
-        border-bottom: 10px solid transparent;
-        border-left: 10px solid #3b5998;
-        transform: rotate(-20deg);
-      }
-
-      .mail-stamp {
-        position: absolute;
-        top: 30px;
-        left: 50px;
-        width: 20px;
-        height: 20px;
-        background-color: #3b5998;
+      50% {
         transform: rotate(20deg);
-        animation: stamp-rotate 1s ease-in-out infinite;
       }
 
-      .mail-animation span {
-        position: absolute;
-        border-radius: 50%;
-        animation: mail-bounce 1s ease-in-out infinite;
+      100% {
+        transform: rotate(-20deg);
+      }
+    }
+
+    @keyframes stamp-rotate {
+      0% {
+        transform: rotate(20deg);
       }
 
-      .mail-animation span:nth-child(1) {
-        width: 100%;
-        height: 100%;
-        background-color: #3b5998;
-        opacity: 0.6;
+      100% {
+        transform: rotate(-20deg);
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      .sending-mail-container h2 {
+        font-size: 24px;
       }
 
-      .mail-animation span:nth-child(2) {
-        width: 100%;
-        height: 100%;
-        border: 5px solid #3b5998;
+      .sending-mail-container .mail-animation {
+        width: 80px;
+        height: 80px;
+        margin-top: 15px;
+      }
+
+      .sending-mail-container .mail-animation .mail-envelope {
+        top: 15px;
+        left: 15px;
+        width: 50px;
+        height: 40px;
+        border-width: 3px;
+      }
+
+      .sending-mail-container .mail-animation .mail-stamp {
+        top: 20px;
+        left: 35px;
+        width: 12px;
+        height: 12px;
+      }
+
+      .sending-mail-container .mail-animation span:nth-child(1) {
         opacity: 0.4;
-        animation-delay: 0.25s;
       }
 
-      .mail-animation span:nth-child(3) {
-        width: 100%;
-        height: 100%;
-        border: 5px solid #3b5998;
-        opacity: 0.2;
-        animation-delay: 0.5s;
+      .sending-mail-container .mail-animation span:nth-child(2) {
+        border-width: 3px;
+        opacity: 0.3;
+        animation-delay: 0.2s;
       }
 
-      .mail-animation span:nth-child(4) {
-        width: 100%;
-        height: 100%;
-        border: 5px solid #3b5998;
+      .sending-mail-container .mail-animation span:nth-child(3) {
+        border-width: 3px;
         opacity: 0.1;
-        animation-delay: 0.75s;
+        animation-delay: 0.4s;
       }
 
-      @keyframes mail-bounce {
-        0% {
-          transform: translateY(0px);
-        }
-
-        50% {
-          transform: translateY(-20px);
-        }
-
-        100% {
-          transform: translateY(0px);
-        }
+      .sending-mail-container .mail-animation span:nth-child(3) {
+        border-width: 3px;
+        opacity: 0.1;
+        animation-delay: 0.4s;
       }
 
-      @keyframes envelope-flap {
-        0% {
-          transform: rotate(-20deg);
-        }
+      .sending-mail-container .mail-animation span:nth-child(4) {
+        border-width: 3px;
+        opacity: 0.05;
+        animation-delay: 0.6s;
+      }
+    }
 
-        50% {
-          transform: rotate(20deg);
-        }
-
-        100% {
-          transform: rotate(-20deg);
-        }
+    @media only screen and (max-width: 480px) {
+      .sending-mail-container h2 {
+        font-size: 20px;
       }
 
-      @keyframes stamp-rotate {
-        0% {
-          transform: rotate(20deg);
-        }
-
-        100% {
-          transform: rotate(-20deg);
-        }
+      .sending-mail-container .mail-animation {
+        width: 60px;
+        height: 60px;
+        margin-top: 10px;
       }
 
-      @media only screen and (max-width: 768px) {
-        .sending-mail-container h2 {
-          font-size: 24px;
-        }
-
-        .sending-mail-container .mail-animation {
-          width: 80px;
-          height: 80px;
-          margin-top: 15px;
-        }
-
-        .sending-mail-container .mail-animation .mail-envelope {
-          top: 15px;
-          left: 15px;
-          width: 50px;
-          height: 40px;
-          border-width: 3px;
-        }
-
-        .sending-mail-container .mail-animation .mail-stamp {
-          top: 20px;
-          left: 35px;
-          width: 12px;
-          height: 12px;
-        }
-
-        .sending-mail-container .mail-animation span:nth-child(1) {
-          opacity: 0.4;
-        }
-
-        .sending-mail-container .mail-animation span:nth-child(2) {
-          border-width: 3px;
-          opacity: 0.3;
-          animation-delay: 0.2s;
-        }
-
-        .sending-mail-container .mail-animation span:nth-child(3) {
-          border-width: 3px;
-          opacity: 0.1;
-          animation-delay: 0.4s;
-        }
-
-        .sending-mail-container .mail-animation span:nth-child(3) {
-          border-width: 3px;
-          opacity: 0.1;
-          animation-delay: 0.4s;
-        }
-
-        .sending-mail-container .mail-animation span:nth-child(4) {
-          border-width: 3px;
-          opacity: 0.05;
-          animation-delay: 0.6s;
-        }
+      .sending-mail-container .mail-animation .mail-envelope {
+        top: 10px;
+        left: 10px;
+        width: 40px;
+        height: 30px;
+        border-width: 2px;
       }
 
-      @media only screen and (max-width: 480px) {
-        .sending-mail-container h2 {
-          font-size: 20px;
-        }
-
-        .sending-mail-container .mail-animation {
-          width: 60px;
-          height: 60px;
-          margin-top: 10px;
-        }
-
-        .sending-mail-container .mail-animation .mail-envelope {
-          top: 10px;
-          left: 10px;
-          width: 40px;
-          height: 30px;
-          border-width: 2px;
-        }
-
-        .sending-mail-container .mail-animation .mail-stamp {
-          top: 15px;
-          left: 25px;
-          width: 10px;
-          height: 10px;
-        }
-
-        .sending-mail-container .mail-animation span:nth-child(1) {
-          opacity: 0.3;
-        }
-
-        .sending-mail-container .mail-animation span:nth-child(2) {
-          border-width: 2px;
-          opacity: 0.2;
-          animation-delay: 0.15s;
-        }
-
-        .sending-mail-container .mail-animation span:nth-child(3) {
-          border-width: 2px;
-          opacity: 0.1;
-          animation-delay: 0.3s;
-        }
-
-        .sending-mail-container .mail-animation span:nth-child(4) {
-          border-width: 2px;
-          opacity: 0.05;
-          animation-delay: 0.45s;
-        }
+      .sending-mail-container .mail-animation .mail-stamp {
+        top: 15px;
+        left: 25px;
+        width: 10px;
+        height: 10px;
       }
-    </style>
-  </head>
 
-  <body>
-    <div class="sending-mail-container">
-      <div class="mail-animation">
-        <div class="mail-envelope">
-          <div class="mail-flap"></div>
-          <div class="mail-stamp"></div>
-        </div>
+      .sending-mail-container .mail-animation span:nth-child(1) {
+        opacity: 0.3;
+      }
+
+      .sending-mail-container .mail-animation span:nth-child(2) {
+        border-width: 2px;
+        opacity: 0.2;
+        animation-delay: 0.15s;
+      }
+
+      .sending-mail-container .mail-animation span:nth-child(3) {
+        border-width: 2px;
+        opacity: 0.1;
+        animation-delay: 0.3s;
+      }
+
+      .sending-mail-container .mail-animation span:nth-child(4) {
+        border-width: 2px;
+        opacity: 0.05;
+        animation-delay: 0.45s;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sending-mail-container">
+    <div class="mail-animation">
+      <div class="mail-envelope">
+        <div class="mail-flap"></div>
+        <div class="mail-stamp"></div>
       </div>
-      <h2>Sending Mail...</h2>
     </div>
-  </body>
+    <h2>Sending Mail...</h2>
+  </div>
+</body>
+
 </html>

@@ -8,7 +8,7 @@ if (typeof jQuery === 'undefined') {
 
 $(document).ready(function () {
     const typedOptions = {
-        strings: ["software developer", "web designer"],
+        strings: ["student", "software developer", "web designer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
