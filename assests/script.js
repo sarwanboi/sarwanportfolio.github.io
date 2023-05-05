@@ -1,14 +1,9 @@
 if (typeof jQuery === 'undefined') {
     console.log("jQuery is not loaded");
+} else if (/1\.(0|1|2|3|4|5|6)\.\d+/.test(jQuery.fn.jquery)) {
+    console.log("jQuery version is not compatible with Owl Carousel");
 } else {
-    var version = jQuery.fn.jquery.split('.').map(function (num) {
-        return parseInt(num, 10);
-    });
-    if (version[0] < 1 || (version[0] === 1 && version[1] < 7)) {
-        console.log("jQuery version is not compatible with Owl Carousel");
-    } else {
-        console.log("jQuery version is compatible with Owl Carousel");
-    }
+    console.log("jQuery version is compatible with Owl Carousel");
 }
 
 $(document).ready(function () {
@@ -25,39 +20,36 @@ $(document).ready(function () {
         loop: true
     };
 
-    // sticky navbar on scroll script
-    $(window).scroll(function () {
-        const navbar = $('.navbar');
-        const scrollY = this.scrollY;
+    // caching frequently used jQuery objects to improve performance
+    const navbar = $('.navbar');
+    const scrollUpBtn = $('.scroll-up-btn');
+    const menuItems = $('.navbar .menu li a');
+    const menuBtn = $('.menu-btn');
 
+    $(window).scroll(function () {
+        const scrollY = this.scrollY;
         if (scrollY > 20) {
             navbar.addClass("sticky");
         } else {
             navbar.removeClass("sticky");
         }
 
-        // scroll-up button show/hide script
-        const scrollUpBtn = $('.scroll-up-btn');
         const showScrollUpBtn = scrollY > 500;
         scrollUpBtn.toggleClass("show", showScrollUpBtn);
     });
 
-    // slide-up script
-    $('.scroll-up-btn').click(function () {
+    scrollUpBtn.click(function () {
         $('html').animate({ scrollTop: 0 });
-        // removing smooth scroll on slide-up button click
         $('html').css("scrollBehavior", "auto");
     });
 
-    $('.navbar .menu li a').click(function () {
-        // applying again smooth scroll on menu items click
+    menuItems.click(function () {
         $('html').css("scrollBehavior", "smooth");
     });
 
-    // toggle menu/navbar script
-    $('.menu-btn').click(function () {
-        $('.navbar .menu').toggleClass("active");
-        $('.menu-btn i').toggleClass("active");
+    menuBtn.click(function () {
+        navbar.find('.menu').toggleClass("active");
+        $(this).find('i').toggleClass("active");
     });
 
     // typing text animation script
