@@ -193,7 +193,7 @@ section .title::after {
 /* home section styling */
 .home {
     display: flex;
-    background: url("../images/banner.jpg") no-repeat center;
+    background: url("../images/banner.webp") no-repeat center;
     height: 100vh;
     color: #000;
     min-height: 500px;
@@ -869,7 +869,7 @@ footer span a:hover {
 
 @media only screen and (max-width: 550px) {
     .home {
-        background: url("../images/banner1.jpg") no-repeat center;
+        background: url("../images/banner1.webp") no-repeat center;
     }
 
     .home .home-content .text-2 {
@@ -964,7 +964,7 @@ footer span a:hover {
 
 @media only screen and (max-width: 535px) {
     .home {
-        background: url("../images/banner1.jpg") no-repeat center;
+        background: url("../images/banner1.webp") no-repeat center;
     }
 }
 
