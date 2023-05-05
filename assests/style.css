@@ -121,7 +121,7 @@ section .title::after {
 
 .navbar .logo a span {
     color: #ccc;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
     letter-spacing: 2px;
 }
 
@@ -145,7 +145,7 @@ section .title::after {
 }
 
 .navbar .menu li a:hover {
-    color: #9f5df0;
+    color: #606de4;
 }
 
 .navbar.sticky .menu li a:hover {
@@ -223,7 +223,7 @@ section .title::after {
 }
 
 .home .home-content .text-3 span {
-    color: rgb(112, 106, 224);
+    color: rgb(50, 121, 244);
     font-weight: 500;
 }
 
@@ -261,7 +261,7 @@ section .title::after {
     width: 400px;
     object-fit: cover;
     border-radius: 18px;
-    box-shadow: 10px 10px 140px 10px rgb(176, 215, 249);
+    box-shadow: 10px 10px 140px 10px rgb(162, 202, 238);
 }
 
 .about .about-content .right {
@@ -822,6 +822,7 @@ footer span a:hover {
     .navbar .menu li a {
         color: #111;
     }
+
     .navbar .menu li a:hover {
         color: #6bc8f6;
         backdrop-filter: blur(10px);
@@ -912,6 +913,10 @@ footer span a:hover {
     .navbar .logo a span {
         color: #FFF;
     }
+
+    .navbar.sticky .logo a span {
+        color: #CCC;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -942,6 +947,18 @@ footer span a:hover {
         width: 35px;
         font-size: 23px;
         line-height: 38px;
+    }
+
+    .navbar .logo a {
+        color: #161616;
+    }
+
+    .navbar .logo a span {
+        color: #FFF;
+    }
+
+    .navbar.sticky .logo a span {
+        color: #CCC;
     }
 }
 
