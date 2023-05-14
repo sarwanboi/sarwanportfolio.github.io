@@ -13,6 +13,7 @@ $(document).ready(function () {
         backSpeed: 60,
         loop: true
     };
+
     const typedOption = {
         strings: ["software developer", "web designer", "student"],
         typeSpeed: 100,
