@@ -4,7 +4,7 @@
 
 - Owner: `Sarwan Yadav`
 - Developed & Built by @ `Sarwan Yadav`
-- Contribution @ `Anish Yadav`
+- Contribution @ ``
 
 ## Contact Us
 
