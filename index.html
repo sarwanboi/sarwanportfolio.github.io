@@ -2,16 +2,28 @@
 <html>
 
 <head>
-  <meta http-equiv="refresh" content="1;
-         URL=https://sarwanboi.netlify.app/" />
+  <script type="text/javascript">
+    // Function to handle redirection using multiple methods
+    function redirectToURL(url) {
+      // Check if window.location supports replace
+      if (typeof window.location.replace === 'function') {
+        window.location.replace(url); // If supported, use this method for immediate redirection
+      } else {
+        try {
+          window.location.href = url; // Use window.location.href as a fallback method
+        } catch (error) {
+          console.error('Redirection failed:', error); // Log any potential error during redirection
+          // Add further methods here if needed
+        }
+      }
+    }
+
+    // Redirect to the specified URL
+    redirectToURL('https://sarwanboi.netlify.app/');
+  </script>
 </head>
 
-<body>
-  <p>
-    If you are not redirected in five seconds,
-    <a href="https://sarwanboi.netlify.app/">
-      click here</a>.
-  </p>
+<body style="display: none;">
 </body>
 
 </html>
